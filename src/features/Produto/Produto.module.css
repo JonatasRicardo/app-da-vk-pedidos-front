@@ -1,0 +1,191 @@
+.product {
+    display: flex;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,0.29);
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.price {
+
+}
+
+.imageContainer {
+
+}
+
+.image {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.descricao {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lista {
+}
+
+.lista ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.lista ul li{
+    width: 49%;
+}
+
+.listaTitle {
+    display: flex;
+}
+
+.listaTitle span{
+    background: #000;
+    color: #fff;
+    height: 31px;
+    float: left;
+    margin-top: 29px;
+    line-height: 31px;
+    padding: 0 18px 0 0;
+    border-radius: 0 15px 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.titleCurve{
+    width: 30px;
+    height: 60px;
+}
+
+.titleCurve path{
+    fill: #000;
+}
+
+
+.ingredientes {
+    padding: 20px 15px 80px;
+}
+.ingrediente {
+    margin-bottom: 25px;
+}
+.ingredienteTitle {
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+    margin: 10px 0 15px;
+}
+.ingredienteOption {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+}
+.ingredienteOption span{
+    padding: 10px 10px;
+}
+.ingredienteOption input{
+    opacity: 0;
+    position: absolute;
+    margin-left: -999999px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.btn {
+    display:inline-block;
+    line-height:normal;
+    white-space:nowrap;
+    vertical-align:middle;
+    text-align:center;
+    cursor:pointer;
+    -webkit-user-drag:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    border: 0;
+    border-radius: 40px;
+    padding: 10px 15px;
+    font-size: 20px;
+    box-shadow: 4px 7px 23px -14px rgba(0,0,0,0.64);
+    margin: 0 10px;
+
+}
+.btn::-moz-focus-inner {
+    padding:0;
+    border:0
+}
+
+.btnAdd {
+    color: #fff;
+    background: #68bf00;
+    flex: 1.5;
+}
+.preco {}
+.qtd {
+    border: 1px solid #000;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    flex: 1;
+    height: 50px;
+    background: #fff;
+    box-shadow: 4px 7px 23px -14px rgba(0,0,0,0.64);
+
+}
+.btnPlus,
+.btnMinus {
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.btnPlus {}
+.inputAdd {
+    width: 30px;
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+@media (max-width: 768px) 
+{
+    .lista ul{
+        flex-direction: column;
+    }
+    .lista ul li{
+        width: 100%;
+    }
+}

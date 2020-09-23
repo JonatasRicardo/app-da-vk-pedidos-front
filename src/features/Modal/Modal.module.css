@@ -1,0 +1,134 @@
+.modal {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: slide-from-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.open {
+    animation: slide-from-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.noEffect {
+    left: -200%;
+    z-index: -1;
+
+    animation: none !important;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.body {
+    top: 60px;
+    height: calc(100% - 60px);
+    width: 100%;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.title {
+    font-size: 30px;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.back {
+    background: transparent;
+    color: #fff;
+    border: 0;
+    font-size: 40px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 1023px) 
+{
+    .desktop {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1024px) 
+{
+    .mobile {
+        display: none;
+    }
+    .modal {
+        width: 768px;
+        height: 80%;
+        top: 40px;
+        left: 50%;
+        overflow: auto;
+        margin-left: -384px;
+        animation: slide-to-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        -webkit-box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.64);
+        -moz-box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.64);
+        box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.64);
+    }
+    .open {
+        animation: slide-from-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .noEffect {
+        top: -200%;
+    }
+    .body {
+        height: auto;
+        width: auto;
+        position: relative;
+    }
+    .back {
+        float: right;
+    }
+}
+
+
+ @keyframes slide-from-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+ @keyframes slide-from-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+ @keyframes slide-to-bottom {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(130%);
+    }
+}
+  
+
+ @keyframes slide-from-bottom {
+    0% {
+        transform: translateY(130%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+  
