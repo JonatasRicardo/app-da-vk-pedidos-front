@@ -34,12 +34,14 @@ function ModalProduto (props) {
         return !!(values[ingrediente] && values[ingrediente][value] && values[ingrediente][value] > 0);
     }
 
-    const handleCheck = (ingredienteId, qtd = 1) => (event) => {
+    const isDisabled = (ingrediente,value,quantidadePermitida,customizavel) => {
+        return false;
+    }
+
+    const handleCheck = (ingredienteId, qtd = 1, quantidadePermitida = 1) => (event) => {
         const { value, checked } = event.target;
         const ingredienteTipo = values[ingredienteId] || {};
         
-        console.log( { value, checked })
-
         const quantidade = checked ? qtd : 0;
         setValues({
             ...values,
@@ -68,14 +70,16 @@ function ModalProduto (props) {
                     id,
                     nome,
                     opcoes,
-                    quantidadeCustomizavel,
-                    quantidadeIncluida,
+                    // quantidadeCustomizavel,
+                    quantidadePermitida = 1,
                 }) => (
                     <div key={id} className={styles.ingrediente}>
                         <h4 className={styles.ingredienteTitle}>{nome}</h4>
                         <ul>
                             {opcoes.map((opcao) => (
-                                <li className={styles.ingredienteOption}>
+                                <li
+                                    className={`${styles.ingredienteOption} ${isDisabled(id,opcao.id,quantidadePermitida,customizavel) ? styles.disabled : '' }`}
+                                >
                                     <label htmlFor={opcao.id}>
                                         <input
                                             type="checkbox"
@@ -84,6 +88,7 @@ function ModalProduto (props) {
                                             id={opcao.id}
                                             value={opcao.id}
                                             onChange={handleCheck(id)}
+                                            disabled={isDisabled(id,opcao.id,quantidadePermitida,customizavel)}
                                         />
                                         {isIncluded(id,opcao.id) && <i className="fa fa-check-square" />}
                                         {!isIncluded(id,opcao.id) && <i className="fa fa-square" />}

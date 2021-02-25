@@ -4,8 +4,8 @@ import Modal from '../Modal';
 
 function Header(props) {
     const {
-        capa = 'https://scontent-gig2-1.cdninstagram.com/v/t51.2885-15/e35/107512756_2535001389936527_5764518051365348860_n.jpg?_nc_ht=scontent-gig2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=QvB6s3piI1kAX8ez-g5&oh=e0009e9f30ac9094db8a19b96ea20151&oe=5F7B821C',
-        logo = 'https://scontent-gig2-1.cdninstagram.com/v/t51.2885-19/s150x150/17881899_195091821005725_733024576669220864_a.jpg?_nc_ht=scontent-gig2-1.cdninstagram.com&_nc_ohc=_OK7CpZhxZUAX81GUhL&oh=146fccae764bb1de91ab573acfe86062&oe=5F7D2D8C',
+        capa = 'https://wallpapercrafter.com/desktop/210218-food-burger-tray-and-board-hd.jpg',
+        logo = 'https://image.shutterstock.com/image-vector/tasty-burger-icon-simple-illustration-260nw-1441325378.jpg',
         nome = 'RG Burguer - hamburguer artesanal',
         tempoEntregaMin = '30 min',
         tempoEntregaMax = '1 h',
